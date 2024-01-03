@@ -3,19 +3,19 @@ table:
   schema: public
 configuration:
   column_config:
-    addressTypeID:
+    addressTypeId:
       custom_name: id
     isActive?:
       custom_name: isActive_
   custom_column_names:
-    addressTypeID: id
+    addressTypeId: id
     isActive?: isActive_
   custom_root_fields: {}
 array_relationships:
   - name: addresses
     using:
       foreign_key_constraint_on:
-        column: addressTypeID
+        column: addressTypeId
         table:
           name: address
           schema: public
@@ -25,7 +25,7 @@ select_permissions:
       columns:
         - _createdAt
         - _lastUpdatedAt
-        - addressTypeID
+        - addressTypeId
         - mismoValue
         - name
       filter:
